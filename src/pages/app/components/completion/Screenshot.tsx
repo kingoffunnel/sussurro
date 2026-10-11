@@ -29,7 +29,7 @@ export const Screenshot = ({
       className="cursor-pointer"
       title={
         !supportsImages
-          ? "Screenshot not supported by current AI provider"
+          ? "Captura de tela não suportada pelo provedor de IA atual"
           : `${captureMode} mode (${processingMode}) - ${attachedFiles.length}/${MAX_FILES} files`
       }
       onClick={captureScreenshot}

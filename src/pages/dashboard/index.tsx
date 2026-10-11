@@ -1,66 +1,18 @@
-import { useCallback, useEffect, useState } from "react";
-import { invoke } from "@tauri-apps/api/core";
-import { GetLicense } from "@/components";
-import { PluelyApiSetup, Usage } from "./components";
 import { PageLayout } from "@/layouts";
-import { useApp } from "@/contexts";
 
+// Sussurro (fork do Pluely v0.1.9): painel sem integração com a API/licença do Pluely oficial.
+// Configure seus provedores (IA e transcrição) na aba de configurações de Dev Space.
 const Dashboard = () => {
-  const { hasActiveLicense } = useApp();
-  const [activity, setActivity] = useState<any>(null);
-  const [loadingActivity, setLoadingActivity] = useState(false);
-
-  const fetchActivity = useCallback(async () => {
-    if (!hasActiveLicense) {
-      setActivity({ data: [], total_tokens_used: 0 });
-      return;
-    }
-    setLoadingActivity(true);
-    try {
-      const response = await invoke("get_activity");
-      const responseData: any = response;
-      if (responseData && responseData.success) {
-        setActivity(responseData);
-      } else {
-        setActivity({ data: [], total_tokens_used: 0 });
-      }
-    } catch (error) {
-      setActivity({ data: [], total_tokens_used: 0 });
-    } finally {
-      setLoadingActivity(false);
-    }
-  }, [hasActiveLicense]);
-
-  useEffect(() => {
-    if (hasActiveLicense) {
-      fetchActivity();
-    } else {
-      setActivity(null);
-    }
-  }, [fetchActivity, hasActiveLicense]);
-
-  const activityData =
-    activity && Array.isArray(activity.data) ? activity.data : [];
-  const totalTokens =
-    activity && typeof activity.total_tokens_used === "number"
-      ? activity.total_tokens_used
-      : 0;
-
   return (
     <PageLayout
-      title="Dashboard"
-      description="Pluely license to unlock faster responses, quicker support and premium features."
-      rightSlot={!hasActiveLicense ? <GetLicense /> : null}
+      title="Painel"
+      description="Sussurro: use suas próprias chaves de IA e transcrição. Configure os provedores no Dev Space."
     >
-      {/* Pluely API Setup */}
-      <PluelyApiSetup />
-
-      <Usage
-        loading={loadingActivity}
-        onRefresh={fetchActivity}
-        data={activityData}
-        totalTokens={totalTokens}
-      />
+      <div className="text-sm text-muted-foreground space-y-2">
+        <p>1. Abra o Dev Space e escolha o provedor de IA (ex.: Anthropic/Claude) e cole sua chave.</p>
+        <p>2. Escolha o provedor de transcrição (ex.: Deepgram) e cole sua chave.</p>
+        <p>3. Na barra flutuante, ligue a captura do áudio do sistema e comece a call.</p>
+      </div>
     </PageLayout>
   );
 };

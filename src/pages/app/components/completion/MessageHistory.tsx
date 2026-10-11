@@ -29,7 +29,7 @@ export const MessageHistory = ({
         <Button
           size="icon"
           variant="outline"
-          aria-label="View Current Conversation"
+          aria-label="Ver conversa atual"
           className="relative cursor-pointer w-12 h-7 px-2 flex gap-1 items-center justify-center"
         >
           <div className="flex items-center justify-center text-xs font-medium">

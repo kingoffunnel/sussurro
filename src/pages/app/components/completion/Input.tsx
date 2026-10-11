@@ -49,7 +49,7 @@ export const Input = ({
           <div className="relative select-none">
             <InputComponent
               ref={inputRef}
-              placeholder="Ask me anything..."
+              placeholder="Pergunte qualquer coisa..."
               value={input}
               onChange={(e) => setInput(e.target.value)}
               onKeyPress={handleKeyPress}
@@ -144,7 +144,7 @@ export const Input = ({
                   isLoading
                     ? "Cancel loading"
                     : keepEngaged
-                    ? "Close and start new conversation"
+                    ? "Fechar e iniciar nova conversa"
                     : "Clear conversation"
                 }
               >
@@ -157,13 +157,13 @@ export const Input = ({
             <div className="p-4">
               {error && (
                 <div className="mb-4 p-3 bg-destructive/10 border border-destructive/20 rounded text-sm text-destructive">
-                  <strong>Error:</strong> {error}
+                  <strong>Erro:</strong> {error}
                 </div>
               )}
               {isLoading && (
                 <div className="flex items-center gap-2 my-4 text-muted-foreground animate-pulse select-none">
                   <Loader2 className="h-4 w-4 animate-spin" />
-                  <span className="text-sm">Generating response...</span>
+                  <span className="text-sm">Gerando resposta...</span>
                 </div>
               )}
               {response && <Markdown>{response}</Markdown>}

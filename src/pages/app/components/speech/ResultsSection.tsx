@@ -59,7 +59,7 @@ export const ResultsSection = ({
           {/* System Input - Just text with bold label */}
           {lastTranscription && (
             <p className="text-[11px] text-muted-foreground">
-              <span className="font-semibold">System:</span> {lastTranscription}
+              <span className="font-semibold">Cliente:</span> {lastTranscription}
             </p>
           )}
 

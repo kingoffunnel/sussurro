@@ -44,7 +44,7 @@ export const QuickActions = ({
       <div className="flex justify-between items-center">
         <div className="flex items-center gap-1.5">
           <ZapIcon className="w-3.5 h-3.5 text-primary" />
-          <h4 className="text-xs font-medium">Quick Actions</h4>
+          <h4 className="text-xs font-medium">Ações rápidas</h4>
         </div>
         <div className="flex items-center gap-1">
           {show && (
@@ -115,7 +115,7 @@ export const QuickActions = ({
                 type="text"
                 value={newAction}
                 onChange={(e) => setNewAction(e.target.value)}
-                placeholder="Add action..."
+                placeholder="Adicionar ação..."
                 className="h-7 text-xs w-28"
                 onKeyDown={(e) => {
                   if (e.key === "Enter") {

@@ -47,7 +47,7 @@ const AutoSpeechVADInternal = ({
           setState((prev: any) => ({
             ...prev,
             error:
-              "No speech provider selected. Please select one in settings.",
+              "Nenhum provedor de transcrição selecionado. Escolha um nas configurações.",
           }));
           return;
         }
@@ -61,7 +61,7 @@ const AutoSpeechVADInternal = ({
           setState((prev: any) => ({
             ...prev,
             error:
-              "Speech provider configuration not found. Please check your settings.",
+              "Configuração do provedor de transcrição não encontrada. Confira as configurações.",
           }));
           return;
         }

@@ -87,7 +87,7 @@ export const PermissionFlow = ({
     checking: {
       icon: <LoaderIcon className="w-5 h-5 animate-spin" />,
       title: "Checking Permissions",
-      description: "Verifying system audio access...",
+      description: "Verificando acesso ao áudio do sistema...",
       bgColor: "bg-blue-50",
       borderColor: "border-blue-200",
       textColor: "text-blue-800",
@@ -114,7 +114,7 @@ export const PermissionFlow = ({
     denied: {
       icon: <ShieldAlertIcon className="w-5 h-5" />,
       title: "Permission Required",
-      description: "Grant access to capture system audio",
+      description: "Permita a captura do áudio do sistema",
       bgColor: "bg-muted/50",
       borderColor: "border-border",
       textColor: "text-muted-foreground",
@@ -165,7 +165,7 @@ export const PermissionFlow = ({
                   <li>Open System Settings</li>
                   <li>Go to Privacy & Security</li>
                   <li>Select Screen & System Audio Recording</li>
-                  <li>Enable Pluely</li>
+                  <li>Ative o Sussurro</li>
                 </ol>
               )}
             </div>

@@ -32,7 +32,7 @@ export const ModeSwitcher = ({
       >
         <AudioWaveformIcon className="w-4 h-4 flex-shrink-0" />
         <div className="flex flex-col items-start">
-          <span className="text-xs font-medium leading-tight">Auto-detect</span>
+          <span className="text-xs font-medium leading-tight">Automático</span>
           <span className="text-[9px] font-normal opacity-60 leading-tight">
             (voice activity)
           </span>

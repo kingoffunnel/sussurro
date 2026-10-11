@@ -40,6 +40,13 @@ export const RESPONSE_LENGTHS: ResponseLengthOption[] = [
 
 export const LANGUAGES: LanguageOption[] = [
   {
+    id: "auto",
+    name: "Automático (idioma da reunião)",
+    flag: "🌐",
+    prompt:
+      "IDIOMA: detecte automaticamente o idioma em que o interlocutor está falando. A fala sugerida deve sair NO IDIOMA DA REUNIÃO. Se esse idioma não for português, mostre logo abaixo a tradução em português do Brasil, para o usuário entender o que vai dizer.",
+  },
+  {
     id: "english",
     name: "English",
     flag: "🇺🇸",
@@ -71,9 +78,9 @@ export const LANGUAGES: LanguageOption[] = [
   },
   {
     id: "portuguese",
-    name: "Portuguese",
-    flag: "🇵🇹",
-    prompt: "Respond in Portuguese (Português).",
+    name: "Português (Brasil)",
+    flag: "🇧🇷",
+    prompt: "Responda em português do Brasil.",
   },
   {
     id: "dutch",
@@ -216,5 +223,5 @@ export const LANGUAGES: LanguageOption[] = [
 ];
 
 export const DEFAULT_RESPONSE_LENGTH = "auto";
-export const DEFAULT_LANGUAGE = "english";
+export const DEFAULT_LANGUAGE = "auto";
 export const DEFAULT_AUTO_SCROLL = true;

@@ -28,7 +28,7 @@ export const Warning = ({ isVadMode }: WarningProps) => {
       >
         <div className="flex items-center gap-2">
           <InfoIcon className="w-3.5 h-3.5 text-muted-foreground" />
-          <span className="text-xs font-medium">Help & Keyboard Shortcuts</span>
+          <span className="text-xs font-medium">Ajuda e atalhos de teclado</span>
         </div>
         <ChevronDownIcon
           className={cn(
@@ -53,8 +53,8 @@ export const Warning = ({ isVadMode }: WarningProps) => {
               </p>
               <p className="text-[10px] text-muted-foreground mt-0.5">
                 {isVadMode
-                  ? "Speech is automatically detected from system audio. When someone speaks, it will be captured and transcribed."
-                  : "Press the record button or use keyboard shortcuts to manually control recording."}
+                  ? "A fala é detectada automaticamente no áudio do sistema. Quando alguém fala, é capturado e transcrito."
+                  : "Aperte o botão de gravar ou use os atalhos para controlar a gravação manualmente."}
               </p>
             </div>
           </div>
@@ -69,13 +69,13 @@ export const Warning = ({ isVadMode }: WarningProps) => {
             </div>
             <div className="grid grid-cols-2 gap-2 text-[10px]">
               <div className="flex items-center justify-between p-1.5 rounded bg-muted/50">
-                <span className="text-muted-foreground">Scroll down</span>
+                <span className="text-muted-foreground">Rolar para baixo</span>
                 <kbd className="px-1.5 py-0.5 rounded bg-background border border-border font-mono">
                   ↓
                 </kbd>
               </div>
               <div className="flex items-center justify-between p-1.5 rounded bg-muted/50">
-                <span className="text-muted-foreground">Scroll up</span>
+                <span className="text-muted-foreground">Rolar para cima</span>
                 <kbd className="px-1.5 py-0.5 rounded bg-background border border-border font-mono">
                   ↑
                 </kbd>
@@ -83,19 +83,19 @@ export const Warning = ({ isVadMode }: WarningProps) => {
               {!isVadMode && (
                 <>
                   <div className="flex items-center justify-between p-1.5 rounded bg-muted/50">
-                    <span className="text-muted-foreground">Start/Stop</span>
+                    <span className="text-muted-foreground">Iniciar/Parar</span>
                     <kbd className="px-1.5 py-0.5 rounded bg-background border border-border font-mono">
                       Enter
                     </kbd>
                   </div>
                   <div className="flex items-center justify-between p-1.5 rounded bg-muted/50">
-                    <span className="text-muted-foreground">Start record</span>
+                    <span className="text-muted-foreground">Iniciar gravação</span>
                     <kbd className="px-1.5 py-0.5 rounded bg-background border border-border font-mono">
                       Space
                     </kbd>
                   </div>
                   <div className="flex items-center justify-between p-1.5 rounded bg-muted/50">
-                    <span className="text-muted-foreground">Discard</span>
+                    <span className="text-muted-foreground">Descartar</span>
                     <kbd className="px-1.5 py-0.5 rounded bg-background border border-border font-mono">
                       Esc
                     </kbd>
@@ -103,7 +103,7 @@ export const Warning = ({ isVadMode }: WarningProps) => {
                 </>
               )}
               <div className="flex items-center justify-between p-1.5 rounded bg-muted/50">
-                <span className="text-muted-foreground">Toggle view</span>
+                <span className="text-muted-foreground">Alternar visualização</span>
                 <kbd className="px-1.5 py-0.5 rounded bg-background border border-border font-mono">
                   {modKey}+K
                 </kbd>
@@ -139,19 +139,19 @@ export const Warning = ({ isVadMode }: WarningProps) => {
           {/* Tips */}
           <div className="text-[10px] text-muted-foreground space-y-1 pt-2 border-t border-border/50">
             <p>
-              <strong>Tip:</strong> Use Auto-detect for hands-free operation
+              <strong>Dica:</strong> Use Auto-detect for hands-free operation
               during interviews.
             </p>
             <p>
-              <strong>Tip:</strong> Use Manual mode when you need precise
+              <strong>Dica:</strong> Use Manual mode when you need precise
               control over what gets transcribed.
             </p>
             <p>
-              <strong>Tip:</strong> Quick Actions let you send follow-up prompts
+              <strong>Dica:</strong> Quick Actions let you send follow-up prompts
               with one click.
             </p>
             <p>
-              <strong>Tip:</strong> Use Screenshot to share your screen context
+              <strong>Dica:</strong> Use Screenshot to share your screen context
               with the AI for more relevant responses.
             </p>
           </div>

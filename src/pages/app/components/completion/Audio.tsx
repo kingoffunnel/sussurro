@@ -35,7 +35,7 @@ export const Audio = ({
               setEnableVAD(!enableVAD);
             }}
             className="cursor-pointer"
-            title="Toggle voice input"
+            title="Ligar/desligar entrada de voz"
           >
             <MicIcon className="h-4 w-4" />
           </Button>
@@ -60,7 +60,7 @@ export const Audio = ({
                 <div className="mt-2 flex flex-row gap-1 items-center text-orange-600">
                   <InfoIcon size={16} />
                   {selectedSttProvider.provider ? null : (
-                    <p>PROVIDER IS MISSING</p>
+                    <p>PROVEDOR NÃO CONFIGURADO</p>
                   )}
                 </div>
 

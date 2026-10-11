@@ -168,8 +168,8 @@ export const SystemAudio = (props: useSystemAudioType) => {
     if (setupRequired) return "Setup required - Click for instructions";
     if (error && !setupRequired) return `Error: ${error}`;
     if (isProcessing) return "Transcribing audio...";
-    if (capturing) return "Stop system audio capture";
-    return "Start system audio capture";
+    if (capturing) return "Parar captura do áudio do sistema";
+    return "Iniciar captura do áudio do sistema";
   };
 
   return (
@@ -220,7 +220,7 @@ export const SystemAudio = (props: useSystemAudioType) => {
                   />
                 )}
                 {setupRequired && (
-                  <h2 className="font-semibold text-sm">Setup Required</h2>
+                  <h2 className="font-semibold text-sm">Configuração necessária</h2>
                 )}
 
                 {/* Action Buttons */}
@@ -236,7 +236,7 @@ export const SystemAudio = (props: useSystemAudioType) => {
                         "h-6 text-[10px] gap-1 px-2",
                         screenshotImage && "bg-primary text-primary-foreground"
                       )}
-                      title="Capture screenshot to include with transcription"
+                      title="Capturar a tela e incluir na transcrição"
                     >
                       {isCapturingScreenshot ? (
                         <LoaderIcon className="w-3 h-3 animate-spin" />
@@ -254,7 +254,7 @@ export const SystemAudio = (props: useSystemAudioType) => {
                       variant="ghost"
                       onClick={startNewConversation}
                       className="h-6 text-[10px] gap-1 px-2"
-                      title="Start a new conversation"
+                      title="Iniciar nova conversa"
                     >
                       <PlusIcon className="w-3 h-3" />
                       New
@@ -267,7 +267,7 @@ export const SystemAudio = (props: useSystemAudioType) => {
                       size="icon"
                       variant="ghost"
                       className="h-6 w-6"
-                      title="Close"
+                      title="Fechar"
                       onClick={() => {
                         setIsPopoverOpen(false);
                         resizeWindow(false);
